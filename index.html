@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<div style="height: 500px;width: 100%" id="main"></div>
+<h1>What is your favorite color?</h1>
+<button value="r"> Red</button>
+<button value="w"> White</button>
+<button value="b"> Black</button>
+<button value="y"> Yellow</button>
+<script>
+	var ele = document.getElementById('main');
+	var array = document.getElementsByTagName('button');
+	for (var i = 0; i < array.length; i++) {
+		array[i].onclick = function (e) {
+			ele.innerHTML = '<img src="' + e.srcElement.value +'.jpg">';
+		}
+	}
+</script>
+</body>
+</html>
